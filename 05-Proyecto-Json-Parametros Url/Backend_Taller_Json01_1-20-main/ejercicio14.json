@@ -1,0 +1,20 @@
+{
+  "estudiante": {
+    "nombre": "Laura Martínez",
+    "grado": 10
+  },
+  "materias_inscritas": [
+    {
+      "materia": "Matemáticas",
+      "nota": 4.5
+    },
+    {
+      "materia": "Física",
+      "nota": 4.2
+    },
+    {
+      "materia": "Tecnología",
+      "nota": 5.0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "usuario": {
+    "nombre": "Santiago Ríos",
+    "email": "srios@example.com"
+  },
+  "historial_compras": [
+    {
+      "fecha": "2025-01-15",
+      "producto": "Audífonos Bluetooth",
+      "valor_total": 120000
+    },
+    {
+      "fecha": "2025-02-02",
+      "producto": "Teclado Mecánico RGB",
+      "valor_total": 180000
+    },
+    {
+      "fecha": "2025-03-20",
+      "producto": "Silla Gamer",
+      "valor_total": 550000
+    }
+  ]
+}

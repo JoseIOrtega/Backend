@@ -1,0 +1,10 @@
+{
+  "nombre": "Colegio Los Robles",
+  "direccion": "Calle 45 #12-30, Bogotá",
+  "grados_ofrecidos": [
+    "Preescolar",
+    "Primaria",
+    "Secundaria",
+    "Media Académica"
+  ]
+}

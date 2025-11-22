@@ -1,0 +1,20 @@
+{
+  "producto": {
+    "nombre": "Laptop Pro X",
+    "categoria": "Computadores"
+  },
+  "proveedores": [
+    {
+      "nombre": "TechWorld S.A.",
+      "contacto": "contacto@techworld.com"
+    },
+    {
+      "nombre": "Distribuciones Globales",
+      "contacto": "ventas@globales.co"
+    },
+    {
+      "nombre": "ElectroMarket Ltda.",
+      "contacto": "soporte@electromarket.com"
+    }
+  ]
+}

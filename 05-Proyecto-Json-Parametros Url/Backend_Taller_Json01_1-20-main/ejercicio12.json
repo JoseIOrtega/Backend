@@ -1,0 +1,19 @@
+{
+  "cliente": {
+    "nombre": "Ana Gómez",
+    "email": "ana.gomez@example.com"
+  },
+  "productos": [
+    {
+      "nombre": "Teclado mecánico",
+      "cantidad": 1,
+      "precio": 150000
+    },
+    {
+      "nombre": "Mouse inalámbrico",
+      "cantidad": 2,
+      "precio": 60000
+    }
+  ],
+  "total": 270000
+}

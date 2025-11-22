@@ -1,0 +1,26 @@
+{
+  "nombre": "Restaurante Sabor Colonial",
+  "tipo_comida": "Comida típica colombiana",
+  "horario": {
+    "lunes_viernes": "9:00 AM - 9:00 PM",
+    "sabado_domingo": "10:00 AM - 10:00 PM"
+  },
+  "menu": [
+    {
+      "plato": "Bandeja Paisa",
+      "precio": 28000
+    },
+    {
+      "plato": "Ajiaco Santafereño",
+      "precio": 25000
+    },
+    {
+      "plato": "Sancocho de Gallina",
+      "precio": 30000
+    },
+    {
+      "plato": "Arepas Variadas",
+      "precio": 8000
+    }
+  ]
+}

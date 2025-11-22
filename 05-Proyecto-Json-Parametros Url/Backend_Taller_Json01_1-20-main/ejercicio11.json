@@ -1,0 +1,21 @@
+{
+  "nombre": "Carlos Pérez",
+  "edad": 30,
+  "direcciones": [
+    {
+      "ciudad": "Bogotá",
+      "calle": "Calle 123 #45-67",
+      "codigo_postal": "110111"
+    },
+    {
+      "ciudad": "Medellín",
+      "calle": "Cra 50 #30-20",
+      "codigo_postal": "050021"
+    },
+    {
+      "ciudad": "Cali",
+      "calle": "Av. Pasoancho 45-90",
+      "codigo_postal": "760042"
+    }
+  ]
+}

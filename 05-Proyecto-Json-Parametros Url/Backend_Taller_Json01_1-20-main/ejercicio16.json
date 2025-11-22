@@ -1,0 +1,21 @@
+{
+  "destino": "San Andrés",
+  "fechas": {
+    "salida": "2025-06-10",
+    "regreso": "2025-06-17"
+  },
+  "pasajeros": [
+    {
+      "nombre": "Carlos Pérez",
+      "edad": 34
+    },
+    {
+      "nombre": "María López",
+      "edad": 29
+    },
+    {
+      "nombre": "Daniel Pérez",
+      "edad": 7
+    }
+  ]
+}

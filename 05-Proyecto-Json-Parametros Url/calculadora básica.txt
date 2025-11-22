@@ -1,0 +1,5 @@
+calculadora básica:
+sumar
+multiplicar
+restar
+dividir

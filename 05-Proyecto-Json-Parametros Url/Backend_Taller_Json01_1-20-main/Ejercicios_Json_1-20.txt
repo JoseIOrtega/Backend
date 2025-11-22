@@ -1,0 +1,267 @@
+1------------------------------------------------------
+{
+  "nombre": "José Ramírez",
+  "edad": 28,
+  "genero": "Masculino",
+  "ciudad": "Cali"
+}
+2------------------------------------------------------
+{
+  "nombre_producto": "Auriculares Inalámbricos",
+  "precio": 95000,
+  "categoria": "Tecnología"
+}
+3------------------------------------------------------
+{
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "año": 2022,
+  "color": "Gris"
+}
+4------------------------------------------------------
+{
+  "nombre_curso": "Introducción a la Programación",
+  "duracion_horas": 40,
+  "modalidad": "Virtual"
+}
+5------------------------------------------------------
+{
+  "nombre": "María Fernanda López",
+  "identificacion": "1029384756",
+  "programa_academico": "Ingeniería de Sistemas",
+  "activo": true
+}
+6------------------------------------------------------
+{
+  "titulo": "Cien Años de Soledad",
+  "autor": "Gabriel García Márquez",
+  "paginas": 496,
+  "editorial": "Editorial Sudamericana"
+}
+7------------------------------------------------------
+{
+  "tipo": "Perro",
+  "nombre": "Rocky",
+  "edad": 3,
+  "raza": "Labrador"
+}
+8------------------------------------------------------
+{
+  "nombre": "Juan Sebastián Torres",
+  "cargo": "Analista de Sistemas",
+  "salario": 3200000,
+  "departamento": "Tecnología"
+}
+9------------------------------------------------------
+{
+  "titulo": "El Origen",
+  "genero": "Ciencia ficción",
+  "duracion_minutos": 148,
+  "año_estreno": 2010
+}
+10-----------------------------------------------------
+{
+  "titular": "Andrea Soto",
+  "tipo_cuenta": "Ahorros",
+  "saldo_actual": 1500000
+}
+11-----------------------------------------------------
+{
+  "nombre": "Carlos Pérez",
+  "edad": 30,
+  "direcciones": [
+    {
+      "ciudad": "Bogotá",
+      "calle": "Calle 123 #45-67",
+      "codigo_postal": "110111"
+    },
+    {
+      "ciudad": "Medellín",
+      "calle": "Cra 50 #30-20",
+      "codigo_postal": "050021"
+    },
+    {
+      "ciudad": "Cali",
+      "calle": "Av. Pasoancho 45-90",
+      "codigo_postal": "760042"
+    }
+  ]
+}
+12-----------------------------------------------------
+{
+  "cliente": {
+    "nombre": "Ana Gómez",
+    "email": "ana.gomez@example.com"
+  },
+  "productos": [
+    {
+      "nombre": "Teclado mecánico",
+      "cantidad": 1,
+      "precio": 150000
+    },
+    {
+      "nombre": "Mouse inalámbrico",
+      "cantidad": 2,
+      "precio": 60000
+    }
+  ],
+  "total": 270000
+}
+13-------------------------------------------------------
+{
+  "estudiante": {
+    "nombre": "Laura Martínez",
+    "grado": 10
+  },
+  "materias_inscritas": [
+    {
+      "materia": "Matemáticas",
+      "nota": 4.5
+    },
+    {
+      "materia": "Física",
+      "nota": 4.2
+    },
+    {
+      "materia": "Tecnología",
+      "nota": 5.0
+    }
+  ]
+}
+14--------------------------------------------------------
+{
+  "estudiante": {
+    "nombre": "Laura Martínez",
+    "grado": 10
+  },
+  "materias_inscritas": [
+    {
+      "materia": "Matemáticas",
+      "nota": 4.5
+    },
+    {
+      "materia": "Física",
+      "nota": 4.2
+    },
+    {
+      "materia": "Tecnología",
+      "nota": 5.0
+    }
+  ]
+}
+15--------------------------------------------------------
+{
+  "nombre": "Colegio Los Robles",
+  "direccion": "Calle 45 #12-30, Bogotá",
+  "grados_ofrecidos": [
+    "Preescolar",
+    "Primaria",
+    "Secundaria",
+    "Media Académica"
+  ]
+}
+16--------------------------------------------------------
+{
+  "destino": "San Andrés",
+  "fechas": {
+    "salida": "2025-06-10",
+    "regreso": "2025-06-17"
+  },
+  "pasajeros": [
+    {
+      "nombre": "Carlos Pérez",
+      "edad": 34
+    },
+    {
+      "nombre": "María López",
+      "edad": 29
+    },
+    {
+      "nombre": "Daniel Pérez",
+      "edad": 7
+    }
+  ]
+}
+17--------------------------------------------------------
+{
+  "producto": {
+    "nombre": "Laptop Pro X",
+    "categoria": "Computadores"
+  },
+  "proveedores": [
+    {
+      "nombre": "TechWorld S.A.",
+      "contacto": "contacto@techworld.com"
+    },
+    {
+      "nombre": "Distribuciones Globales",
+      "contacto": "ventas@globales.co"
+    },
+    {
+      "nombre": "ElectroMarket Ltda.",
+      "contacto": "soporte@electromarket.com"
+    }
+  ]
+}
+18--------------------------------------------------------
+{
+  "evento": "Copa Intercolegiada 2025",
+  "ubicacion": "Estadio Municipal de Cali",
+  "equipos_participantes": [
+    "Tigres del Norte",
+    "Águilas Doradas",
+    "Leones del Sur",
+    "Halcones de Oriente"
+  ]
+}
+19---------------------------------------------------------
+{
+  "nombre": "Restaurante Sabor Colonial",
+  "tipo_comida": "Comida típica colombiana",
+  "horario": {
+    "lunes_viernes": "9:00 AM - 9:00 PM",
+    "sabado_domingo": "10:00 AM - 10:00 PM"
+  },
+  "menu": [
+    {
+      "plato": "Bandeja Paisa",
+      "precio": 28000
+    },
+    {
+      "plato": "Ajiaco Santafereño",
+      "precio": 25000
+    },
+    {
+      "plato": "Sancocho de Gallina",
+      "precio": 30000
+    },
+    {
+      "plato": "Arepas Variadas",
+      "precio": 8000
+    }
+  ]
+}
+20--------------------------------------------------------
+{
+  "usuario": {
+    "nombre": "Santiago Ríos",
+    "email": "srios@example.com"
+  },
+  "historial_compras": [
+    {
+      "fecha": "2025-01-15",
+      "producto": "Audífonos Bluetooth",
+      "valor_total": 120000
+    },
+    {
+      "fecha": "2025-02-02",
+      "producto": "Teclado Mecánico RGB",
+      "valor_total": 180000
+    },
+    {
+      "fecha": "2025-03-20",
+      "producto": "Silla Gamer",
+      "valor_total": 550000
+    }
+  ]
+}

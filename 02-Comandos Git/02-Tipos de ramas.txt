@@ -1,0 +1,6 @@
+Tipos de ramas
+Master es la principal
+Hotfix reparar errores en caliente
+Release cuando se unen las ramas a la master
+Develop es la rama de desarrollo
+Feature características usabilidad e interfaces
