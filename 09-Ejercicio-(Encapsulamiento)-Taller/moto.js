@@ -17,4 +17,7 @@ class Moto extends Vehiculo{
 }
 module.exports=Moto;
 
-const moto2=new Moto('')
+const m1=new Moto("Gt",96,3,"5");
+console.log(m1.marca)
+m1.marca="Yamaha";
+console.log(m1.marca)
