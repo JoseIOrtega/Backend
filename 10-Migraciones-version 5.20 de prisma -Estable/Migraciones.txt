@@ -1,0 +1,64 @@
+
+Tú dijiste:
+Pasos para un ejemplo el cual se crean dos tablas (usuario y publicación)
+
+Primero se debe crear un base de datos vacía, ya que mas adelante se necesita el nombre de la base de datos
+
+Comandos:
+npm init -y
+npm install prisma --save-dev
+npm install prisma@5.20 @prisma/client@5.20
+npx prisma init
+
+Archivo .env:
+
+DATABASE_URL="mysql://root:PASWORD@localhost:PUERTO/NOMBRE_BASE_DE_DATOS"
+
+Archivo schema.prisma:
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id             Int            @id @default(autoincrement())
+  nombre         String
+  email          String         @unique
+  publicaciones  Publicacion[]
+}
+
+model Publicacion {
+  id          Int        @id @default(autoincrement())
+  titulo      String
+  contenido   String
+  usuario     Usuario    @relation(fields: [usuarioId], references: [id])
+  usuarioId   Int
+}
+
+Archivo de prueba: test.js
+
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+
+async function main() {
+  try {
+    await prisma.$connect();
+    console.log("Prisma se conectó correctamente");
+  } catch (error) {
+    console.error("Error al conectar Prisma:", error);
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+main();
+
+Ultimos Comandos: 
+
+npx prisma migrate dev --name init
+npx prisma generate
+node test.js
