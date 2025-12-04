@@ -1,0 +1,148 @@
+-- Crear base de datos y usarla
+create database if not exists fisikapp;
+use fisikapp;
+
+-- Tabla usuarios
+create table usuarios (
+    usuario_id int auto_increment primary key,
+    nombre varchar(100) not null,
+    correo varchar(100) not null unique,
+    contrasena varchar(255) not null,
+    fecha_creacion datetime default current_timestamp
+);
+
+-- Tabla categorias
+create table categorias (
+    categoria_id int auto_increment primary key,
+    nombre varchar(100) not null unique,
+    descripcion text
+);
+
+-- Tabla tipos de etapa
+create table tipos_etapa (
+    tipo_etapa_id int auto_increment primary key,
+    nombre varchar(100) not null unique,
+    descripcion text
+);
+
+-- Tabla laboratorios
+create table laboratorios (
+    laboratorio_id int auto_increment primary key,
+    titulo varchar(150) not null,
+    descripcion text,
+    categoria_id int not null,
+    tiene_ra boolean default false,
+    estado enum('activo','inactivo') default 'activo',
+    fecha_creacion datetime default current_timestamp,
+    creador_id int not null,
+    foreign key (creador_id) references usuarios(usuario_id) on delete cascade,
+    foreign key (categoria_id) references categorias(categoria_id) on delete restrict
+);
+
+-- Tabla etapas del laboratorio
+create table etapas_laboratorio (
+    etapa_id int auto_increment primary key,
+    laboratorio_id int not null,
+    tipo_etapa_id int not null,
+    descripcion text,
+    orden int default 1,
+    foreign key (laboratorio_id) references laboratorios(laboratorio_id) on delete cascade,
+    foreign key (tipo_etapa_id) references tipos_etapa(tipo_etapa_id) on delete restrict
+);
+
+-- Tabla recursos del laboratorio
+create table recursos_laboratorio (
+    recurso_id int auto_increment primary key,
+    etapa_id int not null,
+    tipo enum('texto','imagen','video','audio','enlace') not null,
+    titulo varchar(150) not null,
+    contenido text,
+    orden int default 1,
+    foreign key (etapa_id) references etapas_laboratorio(etapa_id) on delete cascade
+);
+
+-- Tabla recursos de realidad aumentada
+create table recursos_ra (
+    ra_id int auto_increment primary key,
+    laboratorio_id int not null,
+    url_del_modelo text not null,
+    url_del_marcador text,
+    descripcion text,
+    foreign key (laboratorio_id) references laboratorios(laboratorio_id) on delete cascade
+);
+
+-- Tabla grupos por laboratorio
+create table laboratorios_grupos (
+    laboratorio_grupo_id int auto_increment primary key,
+    laboratorio_id int not null,
+    nombre_grupo varchar(150) not null,
+    codigo_ficha varchar(50),
+    link_acceso varchar(255) not null unique,
+    estado enum('activo','inactivo') default 'activo',
+    fecha_apertura datetime default current_timestamp,
+    foreign key (laboratorio_id) references laboratorios(laboratorio_id) on delete cascade
+);
+
+-- Tabla laboratorios participantes
+create table laboratorios_participantes (
+    laboratorio_participante_id int auto_increment primary key,
+    laboratorio_grupo_id int not null,
+    usuario_id int not null,
+    progreso enum('no iniciado','en progreso','finalizado') default 'no iniciado',
+    fecha_union datetime default current_timestamp,
+    unique(usuario_id, laboratorio_grupo_id),
+    foreign key (laboratorio_grupo_id) references laboratorios_grupos(laboratorio_grupo_id) on delete cascade,
+    foreign key (usuario_id) references usuarios(usuario_id) on delete cascade
+);
+
+-- Tabla cuestionarios
+create table cuestionarios (
+    cuestionario_id int auto_increment primary key,
+    laboratorio_id int not null,
+    nombre varchar(150) not null,
+    descripcion text,
+    fecha_creacion datetime default current_timestamp,
+    foreign key (laboratorio_id) references laboratorios(laboratorio_id) on delete cascade
+);
+
+-- Tabla preguntas
+create table preguntas (
+    pregunta_id int auto_increment primary key,
+    cuestionario_id int not null,
+    tipo enum('1','2','3','4') not null,
+    enunciado text not null,
+    foreign key (cuestionario_id) references cuestionarios(cuestionario_id) on delete cascade
+);
+
+-- Tabla respuestas (opciones de cada pregunta)
+create table respuestas (
+    respuesta_id int auto_increment primary key,
+    pregunta_id int not null,
+    enunciado text not null,
+    correcta boolean default false,
+    foreign key (pregunta_id) references preguntas(pregunta_id) on delete cascade
+);
+
+-- Tabla respuestas de los participantes
+create table respuestas_cuestionario (
+    id int auto_increment primary key,                  -- PK
+    laboratorio_participante_id int not null,          -- FK a laboratorios_participantes
+    respuesta_elegida_id int not null,                 -- FK a respuestas
+    es_correcta boolean not null,                      -- si la respuesta elegida es correcta
+    fecha_respuesta datetime default current_timestamp,
+    foreign key (laboratorio_participante_id) references laboratorios_participantes(laboratorio_participante_id) on delete cascade,
+    foreign key (respuesta_elegida_id) references respuestas(respuesta_id) on delete restrict
+);
+
+-- Tabla informes pdf
+create table informes_pdf (
+    informe_id int auto_increment primary key,
+    laboratorio_participante_id int not null,
+    intento int not null default 1,
+    nombre_archivo varchar(150) not null,
+    fecha_generado datetime default current_timestamp,
+    estado enum('generado','pendiente','error') not null default 'pendiente',
+    foreign key (laboratorio_participante_id) references laboratorios_participantes(laboratorio_participante_id) on delete cascade,
+    unique (laboratorio_participante_id, intento)
+);
+
