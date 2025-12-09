@@ -6,8 +6,8 @@ Primero se debe crear un base de datos vacía, ya que mas adelante se necesita e
 
 Comandos:
 npm init -y
-npm install prisma --save-dev
-npm install prisma@5.20 @prisma/client@5.20
+npm install prisma@5.20 --save-dev
+npm install @prisma/client@5.20
 npx prisma init
 
 Archivo .env:
